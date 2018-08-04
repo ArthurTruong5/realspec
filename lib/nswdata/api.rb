@@ -1,3 +1,5 @@
+
+
 require 'opendata-api'
 require 'json'
 API_KEY = Rails.application.credentials.nswdata[:apikey]
