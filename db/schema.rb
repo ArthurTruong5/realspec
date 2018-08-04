@@ -10,13 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_08_04_053709) do
+ActiveRecord::Schema.define(version: 2018_08_04_070024) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "current_addresses", force: :cascade do |t|
     t.string "address"
+    t.float "rent"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "current_rents", force: :cascade do |t|
     t.float "rent"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -39,6 +45,12 @@ ActiveRecord::Schema.define(version: 2018_08_04_053709) do
 
   create_table "new_addresses", force: :cascade do |t|
     t.string "address"
+    t.float "rent"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "new_rents", force: :cascade do |t|
     t.float "rent"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
