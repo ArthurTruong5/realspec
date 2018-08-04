@@ -1,0 +1,2 @@
+class NewAddress < ApplicationRecord
+end

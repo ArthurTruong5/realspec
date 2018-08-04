@@ -1,0 +1,2 @@
+class CurrentTotalCost < ApplicationRecord
+end

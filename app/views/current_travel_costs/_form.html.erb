@@ -1,0 +1,37 @@
+<%= form_with(model: current_travel_cost, local: true) do |form| %>
+  <% if current_travel_cost.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(current_travel_cost.errors.count, "error") %> prohibited this current_travel_cost from being saved:</h2>
+
+      <ul>
+      <% current_travel_cost.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :bus %>
+    <%= form.text_field :bus %>
+  </div>
+
+  <div class="field">
+    <%= form.label :car %>
+    <%= form.text_field :car %>
+  </div>
+
+  <div class="field">
+    <%= form.label :train %>
+    <%= form.text_field :train %>
+  </div>
+
+  <div class="field">
+    <%= form.label :light_rail %>
+    <%= form.text_field :light_rail %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>New Travel Costs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Bus</th>
+      <th>Car</th>
+      <th>Train</th>
+      <th>Light rail</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @new_travel_costs.each do |new_travel_cost| %>
+      <tr>
+        <td><%= new_travel_cost.bus %></td>
+        <td><%= new_travel_cost.car %></td>
+        <td><%= new_travel_cost.train %></td>
+        <td><%= new_travel_cost.light_rail %></td>
+        <td><%= link_to 'Show', new_travel_cost %></td>
+        <td><%= link_to 'Edit', edit_new_travel_cost_path(new_travel_cost) %></td>
+        <td><%= link_to 'Destroy', new_travel_cost, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New New Travel Cost', new_new_travel_cost_path %>

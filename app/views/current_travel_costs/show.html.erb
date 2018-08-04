@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Bus:</strong>
+  <%= @current_travel_cost.bus %>
+</p>
+
+<p>
+  <strong>Car:</strong>
+  <%= @current_travel_cost.car %>
+</p>
+
+<p>
+  <strong>Train:</strong>
+  <%= @current_travel_cost.train %>
+</p>
+
+<p>
+  <strong>Light rail:</strong>
+  <%= @current_travel_cost.light_rail %>
+</p>
+
+<%= link_to 'Edit', edit_current_travel_cost_path(@current_travel_cost) %> |
+<%= link_to 'Back', current_travel_costs_path %>
