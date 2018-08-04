@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @current_address.address %>
+</p>
+
+<p>
+  <strong>Rent:</strong>
+  <%= @current_address.rent %>
+</p>
+
+<%= link_to 'Edit', edit_current_address_path(@current_address) %> |
+<%= link_to 'Back', current_addresses_path %>

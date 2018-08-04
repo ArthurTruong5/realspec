@@ -1,0 +1,2 @@
+class NewTotalCost < ApplicationRecord
+end

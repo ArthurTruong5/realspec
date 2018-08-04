@@ -1,0 +1,9 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Total:</strong>
+  <%= @current_total_cost.total %>
+</p>
+
+<%= link_to 'Edit', edit_current_total_cost_path(@current_total_cost) %> |
+<%= link_to 'Back', current_total_costs_path %>

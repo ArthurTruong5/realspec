@@ -1,0 +1,2 @@
+module CurrentTravelCostsHelper
+end
