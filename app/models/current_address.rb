@@ -1,0 +1,2 @@
+class CurrentAddress < ApplicationRecord
+end

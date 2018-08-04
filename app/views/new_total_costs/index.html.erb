@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>New Total Costs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Total</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @new_total_costs.each do |new_total_cost| %>
+      <tr>
+        <td><%= new_total_cost.total %></td>
+        <td><%= link_to 'Show', new_total_cost %></td>
+        <td><%= link_to 'Edit', edit_new_total_cost_path(new_total_cost) %></td>
+        <td><%= link_to 'Destroy', new_total_cost, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New New Total Cost', new_new_total_cost_path %>

@@ -1,0 +1,2 @@
+class NewTravelCost < ApplicationRecord
+end

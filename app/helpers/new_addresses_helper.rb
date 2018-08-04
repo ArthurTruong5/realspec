@@ -1,0 +1,2 @@
+module NewAddressesHelper
+end

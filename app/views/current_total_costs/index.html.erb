@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Current Total Costs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Total</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @current_total_costs.each do |current_total_cost| %>
+      <tr>
+        <td><%= current_total_cost.total %></td>
+        <td><%= link_to 'Show', current_total_cost %></td>
+        <td><%= link_to 'Edit', edit_current_total_cost_path(current_total_cost) %></td>
+        <td><%= link_to 'Destroy', current_total_cost, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Current Total Cost', new_current_total_cost_path %>

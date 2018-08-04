@@ -10,10 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+
 ActiveRecord::Schema.define(version: 2018_08_04_042515) do
+
+ActiveRecord::Schema.define(version: 2018_08_04_053709) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -30,6 +34,56 @@ ActiveRecord::Schema.define(version: 2018_08_04_042515) do
     t.datetime "updated_at", null: false
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+
+  create_table "current_addresses", force: :cascade do |t|
+    t.string "address"
+    t.float "rent"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "current_total_costs", force: :cascade do |t|
+    t.float "total"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "current_travel_costs", force: :cascade do |t|
+    t.float "bus"
+    t.float "car"
+    t.float "train"
+    t.float "light_rail"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "new_addresses", force: :cascade do |t|
+    t.string "address"
+    t.float "rent"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "new_total_costs", force: :cascade do |t|
+    t.float "total"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "new_travel_costs", force: :cascade do |t|
+    t.float "bus"
+    t.float "car"
+    t.float "train"
+    t.float "light_rail"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "work_locations", force: :cascade do |t|
+    t.string "address"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+
   end
 
 end
