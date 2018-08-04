@@ -1,6 +1,6 @@
 require 'opendata-api'
 require 'json'
-API_KEY = 'r1bq6BvrLKpQLzlf1qnh0P3phZ2Tadtn0FAV'
+API_KEY = Rails.application.credentials.nswdata[:apikey]
 OpenDataAPI.init(API_KEY)
 
 args = [
